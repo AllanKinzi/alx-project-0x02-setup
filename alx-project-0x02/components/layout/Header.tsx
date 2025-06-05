@@ -1,16 +1,13 @@
 const Header = () => {
   return (
     <header className="bg-blue-600 text-white py-4 px-8 flex justify-between items-center">
-      <h1 className="text-2xl font-bold">Alx Listing App</h1>
+       <a href="/" className="text-white"><h1 className="text-2xl font-bold">Alx Listing App</h1> </a>
       <nav className="flex gap-4">
-        <a href="#" className="text-blue-500">
+        <a href="/home" className="text-white">
           Home
         </a>
-        <a href="#" className="text-blue-500">
+        <a href="/about" className="text-white">
           About
-        </a>
-        <a href="#" className="text-blue-500">
-          Contact
         </a>
       </nav>
     </header>

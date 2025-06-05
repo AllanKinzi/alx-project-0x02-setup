@@ -4,16 +4,9 @@ export default function Home() {
   return (
     <>
       <section>
-        <p>Find your favorite place here!</p>
-        <p>The best prices for over 2 million properties worldwide.</p>
+        <h3>Welcome to Alx Project 0x02</h3>
       </section>
-      <section>
-        Filter Section
-      </section>
-
-      <section>
-        Listing Section
-      </section>
+    
     </>
   );
 }

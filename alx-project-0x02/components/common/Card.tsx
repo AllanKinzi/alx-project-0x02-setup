@@ -1,10 +1,11 @@
 import React from "react";
+import { CardProps } from "@/interfaces";
 
-export default function Card({ title, description }: { title: string; description: string }) {
+export default function Card({title,content}: CardProps) {
   return (
-    <div className="p-4 shadow-md bg-white rounded-xl">
+    <div className="bg-white shadow-md rounded-lg p-4 m-2">
       <h2 className="text-xl font-bold">{title}</h2>
-      <p className="text-gray-600">{description}</p>
+      <p className="text-gray-700">{content}</p>
     </div>
   );
 }

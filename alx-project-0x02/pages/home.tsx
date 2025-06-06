@@ -1,6 +1,7 @@
 import Card from "@/components/common/Card";
 import Modal from "@/components/common/PostModal";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 import { CardProps } from "@/interfaces";
 import { useState } from "react";
 
@@ -30,6 +31,7 @@ const Home = () => {
   return (
     <>
       <section>
+        <Header />
         <h3>Welcome HOME2</h3>
         <button
           onClick={() => setIsOpen(true)}

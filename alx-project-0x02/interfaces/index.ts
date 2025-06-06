@@ -17,6 +17,12 @@ export interface CardProps {
     children?: React.ReactNode;
   }
 
+  export interface PostcardProps {
+    title: string;
+    content: string;
+    userId?: string;
+  }
+
   export interface PropertyProps{
     name: string;
     address: {

@@ -5,7 +5,9 @@ export interface CardProps {
   
   export interface ButtonProps {
     label: string;
-    onClick: () => void;
+    onClick?: () => void;
+    size?: "small" | "medium" | "large";
+    shape?: "rounded-sm" | "rounded-md" | "rounded-full";
   }
 
   export interface ModalProps {

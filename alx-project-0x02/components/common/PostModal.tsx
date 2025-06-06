@@ -4,6 +4,11 @@ import React, { useState } from "react";
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const submitForm = () => {
+    onSubmit({ title, content });
+    setTitle("");
+    setContent("");
+  };
 
   if (!isOpen) return null;
 
@@ -17,23 +22,25 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, onSubmit }) => {
           &times;
         </button>
 
-        <div className="flex flex-col gap-4">
-          <input
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-            placeholder="Enter your name"
-          />
-          <textarea
-            value={content}
-            onChange={(e) => setContent(e.target.value)}
-            placeholder="Type content"
-          />
-          <button
-            onClick={() => onSubmit({ title, content })}
-            className="bg-blue-500 text-white px-4 py-2 rounded-lg"
-          >
-            Submit
-          </button>
+        <div >
+          <form className="flex flex-col gap-4">
+            <input
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+              placeholder="Enter your name"
+            />
+            <textarea
+              value={content}
+              onChange={(e) => setContent(e.target.value)}
+              placeholder="Type content"
+            />
+            <button
+              onClick={submitForm}
+              className="bg-blue-500 text-white px-4 py-2 rounded-lg"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       </div>
     </div>

@@ -8,6 +8,13 @@ export interface CardProps {
     onClick: () => void;
   }
 
+  export interface ModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+    onSubmit: (data: CardProps) => void;
+    children?: React.ReactNode;
+  }
+
   export interface PropertyProps{
     name: string;
     address: {
